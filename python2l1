@@ -1,0 +1,10 @@
+import requests
+
+
+request = requests.get('https://bored.api.lewagon.com/api/activity')
+data = request.json()
+activity = data['activity']
+
+print(data)
+print(activity)
+print(request.status_code)
