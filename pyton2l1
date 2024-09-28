@@ -1,0 +1,29 @@
+import random
+
+def zelfde_cijfer(dobbel1, dobbel2):
+  if dobbel1 == dobbel2:
+    print("Je hebt dubbel gegooid!")
+    return True
+    
+  
+
+def dobbel():
+  return random.randint(1,6)
+
+
+antwoord = "ja"
+
+while antwoord == "ja":
+  dobbel1 = dobbel()
+  dobbel2 = dobbel()
+  print(dobbel1, dobbel2)
+
+  zelfde_cijfer(dobbel1, dobbel2)
+  antwoord = input("Wil je nog eens gooien? (ja/nee) ")
+  
+
+
+
+#def zelde_cijfer == True:
+#  int(input("Wil je nog een keer gooien?"))
+
