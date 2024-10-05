@@ -1,0 +1,13 @@
+import pikepdf
+from tqdm import tqdm
+
+
+for password in open("woorden.txt"):
+  try:
+    pikepdf.open("hacking.pdf", password=password.strip())
+    print(password)
+  except pikepdf._core.PasswordError:
+       pass
+
+
+
