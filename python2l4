@@ -1,0 +1,88 @@
+from tkinter import messagebox
+import tkinter
+from tkinter import colorchooser
+import requests
+
+"""
+window = tkinter.Tk()
+window.title("GUI les")
+window.geometry("300x200")
+
+# label maken
+label = tkinter.Label(window, text="Welkom bij mijn eerste GUI!")
+label.pack()
+
+
+# Functie om tekst van label aan te passen
+def verander_tekst():
+    label.config(text="Knop ingedrukt!")
+
+
+# Knop aanmaken
+button = tkinter.Button(window, text="Klik op mij!", command=verander_tekst)
+button.pack()
+
+
+def tekst_terug():
+    label.config(text="Welkom bij mijn eerste GUI!")
+    kleur = colorchooser.askcolor()[1]
+    button1.config(bg=kleur)
+    button.config(bg=kleur)
+
+button1 = tkinter.Button(window, text="terug", command=tekst_terug)
+button1.pack()
+
+
+
+#for i in range(1):
+#    messagebox.showinfo("informatie", "error")
+
+window.mainloop()
+"""
+
+
+
+
+#niet gelukt
+
+window = tkinter.Tk()
+window.title("GUI les")
+window.geometry("300x200")
+
+
+label = tkinter.Label(window, text="PokemonApi")
+label.pack()
+
+pokemon_naam_entry = tkinter.Entry(window)
+pokemon_naam_entry.pack()
+
+pokemon_naam = pokemon_naam_entry.get().lower()
+
+
+label = tkinter.Label(window)
+
+
+
+
+
+def pokemon_info():
+    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/ditto")
+    print(response.json())
+    data = response.json()
+    naam = data['name']
+    hoogte = data['height'] * 10
+    gewicht = data['weight'] / 10
+    types = data['types']
+
+    info = f"Naam:{naam}\nHoogte:{hoogte}\nGewicht:{gewicht}\nTypes:{types}"
+    label.config(text=info)
+
+messagebox.showinfo("pokemon info")
+
+button = tkinter.Button(window, text="Klik op mij!", command=pokemon_info)
+button.pack()
+
+label.pack()
+
+
+window.mainloop()
