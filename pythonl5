@@ -1,0 +1,44 @@
+"""
+class dier:
+  def __init__(self, naam, geluid):
+    self.naam = naam
+    self.geluid = geluid
+    
+  def maak_geluid(self):
+    print(self.geluid)
+
+hond = dier("hond", "woef")
+hond.maak_geluid()
+"""
+
+class pizza:
+
+  def __init__(self, naam, grootte, toppings, drankjes):
+    self.naam = naam
+    self.grootte = grootte
+    self.toppings = toppings
+    self.drankjes = drankjes
+    
+
+
+  def bereken_prijs(self):
+    prijs = 0
+    if self.grootte == "klein":
+      prijs = 5
+    if self.grootte == "medium":
+      prijs = 7
+    if self.grootte == "groot":
+      prijs = 10
+    prijs = prijs + len(self.toppings) * 1.5 + len(self.drankjes) * 3
+    return prijs
+
+  def maak_pizza(self):
+    print(
+        f"Naam : {self.naam} \nGrootte : {self.grootte} \nToppings :  {self.toppings} \nDrankjes : {self.drankjes}"
+    )
+    print(f"Prijs : {self.bereken_prijs()} euro")
+
+
+pizza1 = pizza("Margherita", "medium", ["kaas", "tomatensaus"], "cola")
+pizza1.maak_pizza()
+
