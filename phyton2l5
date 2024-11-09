@@ -1,0 +1,73 @@
+import turtle
+
+class TurtleRacer:
+  def __init__(self, kleur):
+    self.Turtle = turtle.Turtle()
+    self.Turtle.color(kleur)
+    self.Turtle.shape("turtle")
+    self.Turtle.penup()
+    self.Turtle.goto(-200, 200)
+    self.Turtle.pendown()
+    
+
+racers = [
+    TurtleRacer("red"),
+    TurtleRacer("blue"),
+    TurtleRacer("green")
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+class student:
+  def __init__(self, naam, leeftijd):
+    self.naam = naam
+    self.leeftijd = leeftijd
+
+
+  def show_info(self):
+    print(f"Student: {self.naam} is {self.leeftijd} jaar oud.")
+
+student1 = student("Jef", 17)
+student2 = student("Jan", 19)
+
+
+
+
+class in_klas:
+  def __init__(self):
+    self.studenten = []
+
+  def voeg_student_toe(self, student):
+    self.studenten.append(student)
+    
+
+    
+
+  def show_klas(self):
+    for student in self.studenten:
+      student.show_info()
+
+
+
+
+
+
+klas = in_klas()
+klas.voeg_student_toe(student1)
+klas.voeg_student_toe(student2)
+klas.show_klas()
+
+
+"""
